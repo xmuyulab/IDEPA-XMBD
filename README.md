@@ -11,7 +11,7 @@ A pre-print describing the method is available at bioRxiv: [Application of perso
 ## Install
 We use docker to encapsulate the command line version and the plotly version of IDEPA-XMBD separately.
 
-### Cmd Version
+#### Cmd Version
 Pull the docker image of IDEPA-XMBD:
 ```shell
 docker pull ychlouie/idepa_cmd:latest
@@ -22,9 +22,31 @@ Create a docker container containing IDEPA-XMBD:
 docker run -it ychlouie/idepa_cmd:latest
 ```
 
-### Plotly Version
+#### Plotly Version
+Pull the image:
+```shell
+docker pull lylan/idepa:latest
+```
 
+Create a docker container
 ```shell
 
 ```
+
+## Usage
+#### Cmd versioin
+After entering the container, use `-h` to view the IDEPA-XMBD module information:
+```shell
+python /IDEPA-XMBD/individual_depa.py -h
+
+# View specific module information 
+python /IDEPA-XMBD/individual_depa.py [module name] -h
+```
+
+We also provide sample data for each module ：
+```shell
+python /IDEPA-XMBD/individual_depa.py [module name] -p /IDEPA-XMBD/parameters_file/test_parameters.txt
+```
+
+### Plotly version
 
