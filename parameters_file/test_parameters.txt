@@ -1,0 +1,215 @@
+[workdir]
+workdir = /IDEPA/workdir
+sp_workdir = %(workdir)s/sp_workdir
+mc_workdir = %(workdir)s/mc_workdir
+pe_workdir = %(workdir)s/pe_workdir
+ar_workdir = %(workdir)s/ar_workdir
+similarity_workdir = %(workdir)s/similarity_workdir
+type1_error_workdir = %(workdir)s/type1_error_workdir
+kegg_workdir = %(workdir)s/kegg_workdir
+survival_workdir = %(workdir)s/survival_workdir
+
+[script path]
+
+# R bpca模块路径
+r_bpca_path = /IDEPA/r_package/bpca_v2.R
+
+# R penda fdr 模块路径
+r_penda_fdr_path = /IDEPA/r_package/penda_deps_v2.R
+
+# R penda 模块路径
+r_penda_path = /IDEPA/r_package/penda_deps_v3.R
+
+# RankComp 可执行文件路径
+# 需要修改
+reoa_path = /IDEPA/deps_lib/reoa/bin/reoa
+
+
+[preprocess]
+
+# 是否需要对数据进行对数变换，若需要则为True,否则为False
+log_label = True
+
+# 是否需要对数据缺失值进行填充，若需要则为True,否则为False
+imput_label = True
+
+# 缺失值标记, na:' ', 0:0
+na_label = ' '
+
+# 缺失值填充比例
+na_rate = 0.3
+
+# 标准化方式，False or 'z-score'
+normalization = 'z-score'
+
+# 由于R语言不支持一些字符，因此需要对样本名与蛋白质名进行调整
+index_old_char = ['-', ' ']
+index_new_char = '.'
+columns_OLD_char = ['-', ' ']
+columns_new_char = '.'
+
+
+[method parameters]
+cycle_rankc = 128
+fdr = 0.05
+max_exception_rankc = 0.05
+
+
+[stable pairs]
+
+# 输入数据信息
+data_path = /IDEPA/data/test_run_data/data.csv
+normal_cohort_path = /IDEPA/data/test_run_data/normal.txt
+tumor_cohort_path = /IDEPA/data/test_run_data/tumor.txt
+
+# 是否需要可视化包含特定蛋白质稳定对
+label_specific_protein = True
+
+# 存储特定蛋白质的文件
+specific_protein_path = /IDEPA/data/specific_protein/prognosis_unfavorable.txt
+
+# /mnt/public/lyc/project/RankComp_ds/RankProject/IDEPA/data/specific_protein/tissue_specific.txt
+# /mnt/public/lyc/project/RankComp_ds/RankProject/IDEPA/data/specific_protein/druggable_protein.txt
+
+# 逆转对与一致对低于sp_thres，则报错
+sp_thres = 5
+
+# True:随机可视化，False:自己挑选,则需要label_specific_protein = True
+random_visual = False
+
+# 若选取特异性蛋白质，则生成5对包含特异性蛋白质的逆转对或一致对，让用户自己选择
+n_visual = 5
+
+
+[methods comparison]
+
+# 输入数据信息
+data_path = /IDEPA/data/test_run_data/methodsComp/data.csv
+normal_cohort_path = /IDEPA/data/test_run_data/methodsComp/normal.txt
+tumor_cohort_path = /IDEPA/data/test_run_data/methodsComp/tumor.txt
+
+# 在方法评估中，paired data 必须存在
+paired_data_path = /IDEPA/data/test_run_data/methodsComp/paired_data.csv
+paired_samples_path = /IDEPA/data/test_run_data/methodsComp/paired_samples.txt
+
+# 需要进行比较的方法列表
+# methods_list = ['RankComp', 'Penda', 'T-test', 'Wilcoxon', 'Peng method', 'Quantile']
+methods_list = ['RankComp', 'Penda', 'T-test', 'Wilcoxon', 'Quantile']
+
+[parameters evalution]
+
+# 输入数据信息
+data_path = /IDEPA/data/test_run_data/data.csv
+normal_cohort_path = /IDEPA/data/test_run_data/normal.txt
+tumor_cohort_path = /IDEPA/data/test_run_data/tumor.txt
+samples_path = /IDEPA/data/test_run_data/samples.txt
+
+# 评价参数
+sample_size_label = True
+n_protein_label = True
+
+# methods_list = ['RankComp', 'Penda', 'T-test', 'Wilcoxon', 'Quantile', 'Peng method']
+methods_list = ['RankComp', 'Penda', 'T-test', 'Wilcoxon', 'Quantile']
+
+# sample size 与 n_protein 的梯度应根据数据集来设置（sample_size * 2 < 数据集样本对数）
+sample_size_list = [3, 4, 5]
+n_protein_list = [450, 500, 550, 600]
+
+
+[similarity]
+
+# 输入数据信息
+data_path = /IDEPA/data/test_run_data/data.csv
+normal_cohort_path = /IDEPA/data/test_run_data/normal.txt
+tumor_cohort_path = /IDEPA/data/test_run_data/tumor.txt
+
+# 需要进行比较的方法列表
+methods_list = ['RankComp', 'Penda pro', 'T-test', 'Wilcoxon']
+
+# Concordant curve length
+n_cc = 150
+
+
+[type 1 error]
+
+# 输入数据信息
+data_path_list = ['/IDEPA/data/part_of_data/lung_1_data.csv',
+                 '/IDEPA/data/part_of_data/gastric_2_data.csv',
+                 '/IDEPA/data/part_of_data/gastric_3_data.csv',
+                 '/IDEPA/data/part_of_data/liver_4_data.csv',
+                 '/IDEPA/data/part_of_data/lung_5_data.csv']
+
+normal_col_path_list = ['/IDEPA/data/part_of_data/lung_1_normal.txt',
+                       '/IDEPA/data/part_of_data/gastric_2_normal.txt',
+                       '/IDEPA/data/part_of_data/gastric_3_normal.txt',
+                       '/IDEPA/data/part_of_data/liver_4_normal.txt',
+                       '/IDEPA/data/part_of_data/lung_5_normal.txt']
+                       
+tumor_col_path_list = ['/IDEPA/data/part_of_data/lung_1_tumor.txt',
+                       '/IDEPA/data/part_of_data/gastric_2_tumor.txt',
+                       '/IDEPA/data/part_of_data/gastric_3_tumor.txt',
+                       '/IDEPA/data/part_of_data/liver_4_tumor.txt',
+                       '/IDEPA/data/part_of_data/lung_5_tumor.txt']
+                       
+log_label_list = [True, True, True, False, False]
+na_label_list = ['', 0, 0, '', '']
+data_label_list = ['1-lung', '2-gastic', '3-gastric', '4-liver', '5-lung']
+
+nd_sample_size = 8
+
+methods_list = ['RankComp', 'Penda', 'T-test', 'Wilcoxon', 'Quantile']
+
+
+[robustness]
+
+data_1_path = /IDEPA/data/part_of_data/lung_1_data.csv
+normal_cohort_1_path = /IDEPA/data/part_of_data/lung_1_normal.txt
+tumor_cohort_1_path = /IDEPA/data/part_of_data/lung_1_tumor.txt
+
+data_2_path = /IDEPA/data/part_of_data/lung_5_data.csv
+normal_cohort_2_path = /IDEPA/data/part_of_data/lung_5_normal.txt
+tumor_cohort_2_path = /IDEPA/data/part_of_data/lung_5_tumor.txt
+
+log_label_list = [True, False]
+na_label_list = ['', '']
+imput_label_list = [True, True]
+
+robustness_individual_list = ['RankComp', 'Penda pro', 'T-test', 'Wilcoxon']
+
+robustness_group_list = ['RankComp', 'Penda', 'T-test', 'Wilcoxon', 'Quantile']
+
+# Concordant curve length
+n_cc = 150
+
+group_thres = 0.05
+
+
+[survival analysis]
+
+data_path = /IDEPA/data/lung-Xu/data.csv
+normal_cohort_path = /IDEPA/data/lung-Xu/normal.txt
+tumor_cohort_path = /IDEPA/data/lung-Xu/tumor.txt
+
+clinial_path = /IDEPA/data/lung-Xu/clinial_lung-Xu.csv
+
+survival_methods_list = ['RankComp', 'Penda', 'Quantile']
+
+surv_thres = [0.4, 0.6]
+
+
+[kegg]
+
+data_path = /IDEPA/data/test_run_data/data.csv
+normal_cohort_path = /IDEPA/data/test_run_data/normal.txt
+tumor_cohort_path = /IDEPA/data/test_run_data/tumor.txt
+
+kegg_methods_list = ['RankComp', 'Penda', 'Quantile']
+
+group_thres = 0.05
+
+r_kegg_path = '/IDEPA/r_package/run_kegg.R'
+
+
+r_dir = '/opt/conda/bin'
+
+qvalue_thres = 20
