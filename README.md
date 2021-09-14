@@ -49,4 +49,4 @@ python /IDEPA-XMBD/individual_depa.py [module name] -p /IDEPA-XMBD/parameters_fi
 ```
 
 ### Plotly version
-
+After entering the container, you can operate according to [procedure.docx](./procedure.docx)
