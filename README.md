@@ -12,7 +12,7 @@ A pre-print describing the method is available at bioRxiv: [Application of perso
 ## Install
 We use docker to encapsulate the command line version and the plotly version of IDEPA-XMBD separately.
 
-#### Cmd Version
+### Cmd Version
 We provide a docker image with IDEPA-XMBD: https://registry.hub.docker.com/r/ychlouie/idepa_cmd
 
 Pull the docker image of IDEPA-XMBD:
@@ -25,7 +25,7 @@ Create a docker container containing IDEPA-XMBD:
 docker run -it ychlouie/idepa_cmd:latest
 ```
 
-#### Plotly Version
+### Plotly Version
 We provide a docker image with IDEPA-XMBD: https://hub.docker.com/r/lylan/idepa
 
 Pull the image:
@@ -38,6 +38,8 @@ Create a docker container
 docker run -it -d -p HostPort:8095 -v HostDirectory:/IDEPA:workdir lylan/idepa:latest
 ```
 Then, you can enter the IDEPA_plotly version by visiting `HostIP:HostPort` 
+
+The dependency of IDEPA-XMBD is: [environment](./environment.yml)
 
 ## Usage
 ### Cmd versioin
