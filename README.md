@@ -56,6 +56,7 @@ We also provide example data for each module：
 ```shell
 python /IDEPA-XMBD/individual_depa.py moduleName -p /IDEPA-XMBD/parameters_file/test_parameters.txt
 ```
+If you want to change the input data, you can change the content of `/IDEPA-XMBD/parameters_file/test_parameters.txt`
 
 ### Plotly version
 
