@@ -37,7 +37,7 @@ Create a docker container
 ```shell
 docker run -it -d -p HostPort:8095 -v HostDirectory:/IDEPA/workdir lylan/idepa:latest
 ```
-Then, you can enter the IDEPA_plotly version by visiting `HostIP:HostPort` 
+Then, you can enter the IDEPA_plotly version by visiting `HostIP:HostPort`, and all output files will be saved in `HostDirectory`.
 
 The dependency of IDEPA-XMBD is: [environment](./environment.yml)
 
