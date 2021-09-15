@@ -8,6 +8,7 @@ We evaluated five state-of-the-art tools (RankComp v1/v2, PenDA, Peng, and Quant
 
 A pre-print describing the method is available at bioRxiv: [Application of personalized differential expression analysis in human cancer proteome](https://www.biorxiv.org/content/10.1101/2021.07.18.452812v2)
 
+
 ## Install
 We use docker to encapsulate the command line version and the plotly version of IDEPA-XMBD separately.
 
@@ -30,9 +31,9 @@ docker pull lylan/idepa:latest
 
 Create a docker container
 ```shell
-docker run -it -d -p hostPort:8095 -v HostDirectory:/IDEPA:workdir lylan/idepa:latest
+docker run -it -d -p HostPort:8095 -v HostDirectory:/IDEPA:workdir lylan/idepa:latest
 ```
-Then, you can enter the IDEPA_plotly version by visiting `hostIP:hostPort` 
+Then, you can enter the IDEPA_plotly version by visiting `HostIP:HostPort` 
 
 ## Usage
 ### Cmd versioin
@@ -41,14 +42,16 @@ After entering the container, use `-h` to view the IDEPA-XMBD module information
 python /IDEPA-XMBD/individual_depa.py -h
 
 # View specific module information 
-python /IDEPA-XMBD/individual_depa.py <module name> -h
+python /IDEPA-XMBD/individual_depa.py moduleName -h
 ```
+`moduleName` is the name of the module you want to run 
 
 We also provide sample data for each module ：
 ```shell
-python /IDEPA-XMBD/individual_depa.py <module name> -p /IDEPA-XMBD/parameters_file/test_parameters.txt
+python /IDEPA-XMBD/individual_depa.py moduleName -p /IDEPA-XMBD/parameters_file/test_parameters.txt
 ```
 
 ### Plotly version
 
 After entering the container, you can operate according to [procedure.docx](./procedure.docx)
+
