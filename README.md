@@ -1,4 +1,4 @@
-# IDEPA-XMBD
+# IDEPA-XMBD: Individualized Differentially Expressed Protein Analysis
 
 <div align=center><img src="./figs/IDEPA_figs.png" width="50%" height="50%" ></div>
 &nbsp;
@@ -30,11 +30,12 @@ docker pull lylan/idepa:latest
 
 Create a docker container
 ```shell
-
+docker run -it -d -p hostPort:8095 -v HostDirectory:/IDEPA:workdir lylan/idepa:latest
 ```
+IDEPA_plotly IP: http://0.0.0.0:8095/ 
 
 ## Usage
-#### Cmd versioin
+### Cmd versioin
 After entering the container, use `-h` to view the IDEPA-XMBD module information:
 ```shell
 python /IDEPA-XMBD/individual_depa.py -h
@@ -49,4 +50,5 @@ python /IDEPA-XMBD/individual_depa.py [module name] -p /IDEPA-XMBD/parameters_fi
 ```
 
 ### Plotly version
+
 After entering the container, you can operate according to [procedure.docx](./procedure.docx)
