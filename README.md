@@ -32,7 +32,7 @@ Create a docker container
 ```shell
 docker run -it -d -p hostPort:8095 -v HostDirectory:/IDEPA:workdir lylan/idepa:latest
 ```
-IDEPA_plotly IP: http://0.0.0.0:8095/ 
+Then, you can enter the IDEPA_plotly version by visiting `hostIP:hostPort` 
 
 ## Usage
 ### Cmd versioin
@@ -41,12 +41,12 @@ After entering the container, use `-h` to view the IDEPA-XMBD module information
 python /IDEPA-XMBD/individual_depa.py -h
 
 # View specific module information 
-python /IDEPA-XMBD/individual_depa.py [module name] -h
+python /IDEPA-XMBD/individual_depa.py <module name> -h
 ```
 
 We also provide sample data for each module ：
 ```shell
-python /IDEPA-XMBD/individual_depa.py [module name] -p /IDEPA-XMBD/parameters_file/test_parameters.txt
+python /IDEPA-XMBD/individual_depa.py <module name> -p /IDEPA-XMBD/parameters_file/test_parameters.txt
 ```
 
 ### Plotly version
