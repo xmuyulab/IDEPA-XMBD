@@ -35,7 +35,7 @@ docker pull lylan/idepa:latest
 
 Create a docker container
 ```shell
-docker run -it -d -p HostPort:8095 -v HostDirectory:/IDEPA:workdir lylan/idepa:latest
+docker run -it -d -p HostPort:8095 -v HostDirectory:/IDEPA/workdir lylan/idepa:latest
 ```
 Then, you can enter the IDEPA_plotly version by visiting `HostIP:HostPort` 
 
