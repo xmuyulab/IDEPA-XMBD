@@ -46,7 +46,7 @@ python /IDEPA-XMBD/individual_depa.py moduleName -h
 ```
 `moduleName` is the name of the module you want to run 
 
-We also provide sample data for each module ：
+We also provide example data for each module：
 ```shell
 python /IDEPA-XMBD/individual_depa.py moduleName -p /IDEPA-XMBD/parameters_file/test_parameters.txt
 ```
