@@ -12,17 +12,17 @@ survival_workdir = %(workdir)s/survival_workdir
 [script path]
 
 # R bpca模块路径
-r_bpca_path = /IDEPA/r_package/bpca_v2.R
+r_bpca_path = /IDEPA-XMBD/r_package/bpca_v2.R
 
 # R penda fdr 模块路径
-r_penda_fdr_path = /IDEPA/r_package/penda_deps_v2.R
+r_penda_fdr_path = /IDEPA-XMBD/r_package/penda_deps_v2.R
 
 # R penda 模块路径
-r_penda_path = /IDEPA/r_package/penda_deps_v3.R
+r_penda_path = /IDEPA-XMBD/r_package/penda_deps_v3.R
 
 # RankComp 可执行文件路径
 # 需要修改
-reoa_path = /IDEPA/deps_lib/reoa/bin/reoa
+reoa_path = /IDEPA-XMBD/deps_lib/reoa/bin/reoa
 
 
 [preprocess]
@@ -58,15 +58,15 @@ max_exception_rankc = 0.05
 [stable pairs]
 
 # 输入数据信息
-data_path = /IDEPA/data/test_run_data/data.csv
-normal_cohort_path = /IDEPA/data/test_run_data/normal.txt
-tumor_cohort_path = /IDEPA/data/test_run_data/tumor.txt
+data_path = /IDEPA-XMBD/data/test_run_data/data.csv
+normal_cohort_path = /IDEPA-XMBD/data/test_run_data/normal.txt
+tumor_cohort_path = /IDEPA-XMBD/data/test_run_data/tumor.txt
 
 # 是否需要可视化包含特定蛋白质稳定对
 label_specific_protein = True
 
 # 存储特定蛋白质的文件
-specific_protein_path = /IDEPA/data/specific_protein/prognosis_unfavorable.txt
+specific_protein_path = /IDEPA-XMBD/data/specific_protein/prognosis_unfavorable.txt
 
 # /mnt/public/lyc/project/RankComp_ds/RankProject/IDEPA/data/specific_protein/tissue_specific.txt
 # /mnt/public/lyc/project/RankComp_ds/RankProject/IDEPA/data/specific_protein/druggable_protein.txt
@@ -84,13 +84,13 @@ n_visual = 5
 [methods comparison]
 
 # 输入数据信息
-data_path = /IDEPA/data/test_run_data/methodsComp/data.csv
-normal_cohort_path = /IDEPA/data/test_run_data/methodsComp/normal.txt
-tumor_cohort_path = /IDEPA/data/test_run_data/methodsComp/tumor.txt
+data_path = /IDEPA-XMBD/data/test_run_data/methodsComp/data.csv
+normal_cohort_path = /IDEPA-XMBD/data/test_run_data/methodsComp/normal.txt
+tumor_cohort_path = /IDEPA-XMBD/data/test_run_data/methodsComp/tumor.txt
 
 # 在方法评估中，paired data 必须存在
-paired_data_path = /IDEPA/data/test_run_data/methodsComp/paired_data.csv
-paired_samples_path = /IDEPA/data/test_run_data/methodsComp/paired_samples.txt
+paired_data_path = /IDEPA-XMBD/data/test_run_data/methodsComp/paired_data.csv
+paired_samples_path = /IDEPA-XMBD/data/test_run_data/methodsComp/paired_samples.txt
 
 # 需要进行比较的方法列表
 # methods_list = ['RankComp', 'Penda', 'T-test', 'Wilcoxon', 'Peng method', 'Quantile']
@@ -99,10 +99,10 @@ methods_list = ['RankComp', 'Penda', 'T-test', 'Wilcoxon', 'Quantile']
 [parameters evalution]
 
 # 输入数据信息
-data_path = /IDEPA/data/test_run_data/data.csv
-normal_cohort_path = /IDEPA/data/test_run_data/normal.txt
-tumor_cohort_path = /IDEPA/data/test_run_data/tumor.txt
-samples_path = /IDEPA/data/test_run_data/samples.txt
+data_path = /IDEPA-XMBD/data/test_run_data/data.csv
+normal_cohort_path = /IDEPA-XMBD/data/test_run_data/normal.txt
+tumor_cohort_path = /IDEPA-XMBD/data/test_run_data/tumor.txt
+samples_path = /IDEPA-XMBD/data/test_run_data/samples.txt
 
 # 评价参数
 sample_size_label = True
@@ -119,9 +119,9 @@ n_protein_list = [450, 500, 550, 600]
 [similarity]
 
 # 输入数据信息
-data_path = /IDEPA/data/test_run_data/data.csv
-normal_cohort_path = /IDEPA/data/test_run_data/normal.txt
-tumor_cohort_path = /IDEPA/data/test_run_data/tumor.txt
+data_path = /IDEPA-XMBD/data/test_run_data/data.csv
+normal_cohort_path = /IDEPA-XMBD/data/test_run_data/normal.txt
+tumor_cohort_path = /IDEPA-XMBD/data/test_run_data/tumor.txt
 
 # 需要进行比较的方法列表
 methods_list = ['RankComp', 'Penda pro', 'T-test', 'Wilcoxon']
@@ -133,23 +133,23 @@ n_cc = 150
 [type 1 error]
 
 # 输入数据信息
-data_path_list = ['/IDEPA/data/part_of_data/lung_1_data.csv',
-                 '/IDEPA/data/part_of_data/gastric_2_data.csv',
-                 '/IDEPA/data/part_of_data/gastric_3_data.csv',
-                 '/IDEPA/data/part_of_data/liver_4_data.csv',
-                 '/IDEPA/data/part_of_data/lung_5_data.csv']
+data_path_list = ['/IDEPA-XMBD/data/part_of_data/lung_1_data.csv',
+                 '/IDEPA-XMBD/data/part_of_data/gastric_2_data.csv',
+                 '/IDEPA-XMBD/data/part_of_data/gastric_3_data.csv',
+                 '/IDEPA-XMBD/data/part_of_data/liver_4_data.csv',
+                 '/IDEPA-XMBD/data/part_of_data/lung_5_data.csv']
 
-normal_col_path_list = ['/IDEPA/data/part_of_data/lung_1_normal.txt',
-                       '/IDEPA/data/part_of_data/gastric_2_normal.txt',
-                       '/IDEPA/data/part_of_data/gastric_3_normal.txt',
-                       '/IDEPA/data/part_of_data/liver_4_normal.txt',
-                       '/IDEPA/data/part_of_data/lung_5_normal.txt']
+normal_col_path_list = ['/IDEPA-XMBD/data/part_of_data/lung_1_normal.txt',
+                       '/IDEPA-XMBD/data/part_of_data/gastric_2_normal.txt',
+                       '/IDEPA-XMBD/data/part_of_data/gastric_3_normal.txt',
+                       '/IDEPA-XMBD/data/part_of_data/liver_4_normal.txt',
+                       '/IDEPA-XMBD/data/part_of_data/lung_5_normal.txt']
                        
-tumor_col_path_list = ['/IDEPA/data/part_of_data/lung_1_tumor.txt',
-                       '/IDEPA/data/part_of_data/gastric_2_tumor.txt',
-                       '/IDEPA/data/part_of_data/gastric_3_tumor.txt',
-                       '/IDEPA/data/part_of_data/liver_4_tumor.txt',
-                       '/IDEPA/data/part_of_data/lung_5_tumor.txt']
+tumor_col_path_list = ['/IDEPA-XMBD/data/part_of_data/lung_1_tumor.txt',
+                       '/IDEPA-XMBD/data/part_of_data/gastric_2_tumor.txt',
+                       '/IDEPA-XMBD/data/part_of_data/gastric_3_tumor.txt',
+                       '/IDEPA-XMBD/data/part_of_data/liver_4_tumor.txt',
+                       '/IDEPA-XMBD/data/part_of_data/lung_5_tumor.txt']
                        
 log_label_list = [True, True, True, False, False]
 na_label_list = ['', 0, 0, '', '']
@@ -162,13 +162,13 @@ methods_list = ['RankComp', 'Penda', 'T-test', 'Wilcoxon', 'Quantile']
 
 [robustness]
 
-data_1_path = /IDEPA/data/part_of_data/lung_1_data.csv
-normal_cohort_1_path = /IDEPA/data/part_of_data/lung_1_normal.txt
-tumor_cohort_1_path = /IDEPA/data/part_of_data/lung_1_tumor.txt
+data_1_path = /IDEPA-XMBD/data/part_of_data/lung_1_data.csv
+normal_cohort_1_path = /IDEPA-XMBD/data/part_of_data/lung_1_normal.txt
+tumor_cohort_1_path = /IDEPA-XMBD/data/part_of_data/lung_1_tumor.txt
 
-data_2_path = /IDEPA/data/part_of_data/lung_5_data.csv
-normal_cohort_2_path = /IDEPA/data/part_of_data/lung_5_normal.txt
-tumor_cohort_2_path = /IDEPA/data/part_of_data/lung_5_tumor.txt
+data_2_path = /IDEPA-XMBD/data/part_of_data/lung_5_data.csv
+normal_cohort_2_path = /IDEPA-XMBD/data/part_of_data/lung_5_normal.txt
+tumor_cohort_2_path = /IDEPA-XMBD/data/part_of_data/lung_5_tumor.txt
 
 log_label_list = [True, False]
 na_label_list = ['', '']
@@ -186,11 +186,11 @@ group_thres = 0.05
 
 [survival analysis]
 
-data_path = /IDEPA/data/lung-Xu/data.csv
-normal_cohort_path = /IDEPA/data/lung-Xu/normal.txt
-tumor_cohort_path = /IDEPA/data/lung-Xu/tumor.txt
+data_path = /IDEPA-XMBD/data/lung-Xu/data.csv
+normal_cohort_path = /IDEPA-XMBD/data/lung-Xu/normal.txt
+tumor_cohort_path = /IDEPA-XMBD/data/lung-Xu/tumor.txt
 
-clinial_path = /IDEPA/data/lung-Xu/clinial_lung-Xu.csv
+clinial_path = /IDEPA-XMBD/data/lung-Xu/clinial_lung-Xu.csv
 
 survival_methods_list = ['RankComp', 'Penda', 'Quantile']
 
@@ -199,17 +199,17 @@ surv_thres = [0.4, 0.6]
 
 [kegg]
 
-data_path = /IDEPA/data/test_run_data/data.csv
-normal_cohort_path = /IDEPA/data/test_run_data/normal.txt
-tumor_cohort_path = /IDEPA/data/test_run_data/tumor.txt
+data_path = /IDEPA-XMBD/data/test_run_data/data.csv
+normal_cohort_path = /IDEPA-XMBD/data/test_run_data/normal.txt
+tumor_cohort_path = /IDEPA-XMBD/data/test_run_data/tumor.txt
 
 kegg_methods_list = ['RankComp', 'Penda', 'Quantile']
 
 group_thres = 0.05
 
-r_kegg_path = '/IDEPA/r_package/run_kegg.R'
+r_kegg_path = '/IDEPA-XMBD/r_package/run_kegg.R'
 
 
-r_dir = '/opt/conda/bin'
+r_dir = '/opt/conda/envs/reoa3/bin'
 
 qvalue_thres = 20
