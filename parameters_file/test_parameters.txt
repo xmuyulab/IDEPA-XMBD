@@ -186,11 +186,11 @@ group_thres = 0.05
 
 [survival analysis]
 
-data_path = /IDEPA-XMBD/data/lung-Xu/data.csv
-normal_cohort_path = /IDEPA-XMBD/data/lung-Xu/normal.txt
-tumor_cohort_path = /IDEPA-XMBD/data/lung-Xu/tumor.txt
+data_path = /IDEPA-XMBD/data/test_survival_data/test_data.csv
+normal_cohort_path = /IDEPA-XMBD/data/test_survival_data/normal.txt
+tumor_cohort_path = /IDEPA-XMBD/data/test_survival_data/tumor.txt
 
-clinial_path = /IDEPA-XMBD/data/lung-Xu/clinial_lung-Xu.csv
+clinial_path = /IDEPA-XMBD/data/test_survival_data/clinial_lung-Xu.csv
 
 survival_methods_list = ['RankComp', 'Penda', 'Quantile']
 
