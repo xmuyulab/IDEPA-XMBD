@@ -30,7 +30,7 @@ We provide a docker image with IDEPA-XMBD: https://hub.docker.com/r/lylan/idepa
 
 Pull the image:
 ```shell
-docker pull lylan/idepa:latest
+docker pull lylan/idepa:0.1
 ```
 
 Create a docker container
