@@ -17,7 +17,7 @@ We provide a docker image with IDEPA-XMBD: https://registry.hub.docker.com/r/ych
 
 Pull the docker image of IDEPA-XMBD:
 ```shell
-docker pull ychlouie/idepa_cmd:latest
+docker pull ychlouie/idepa_cmd:0.1
 ```
 
 Create a docker container containing IDEPA-XMBD:
