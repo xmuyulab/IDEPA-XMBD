@@ -69,6 +69,8 @@ python /IDEPA-XMBD/individual_depa.py moduleName -p /IDEPA-XMBD/parameters_file/
 
 ## such as
 python /IDEPA-XMBD/individual_depa.py stable -p /IDEPA-XMBD/parameters_file/test_parameters.txt
+
+# result workdir /IDEPA-XMBD/workdir
 ```
 
 If you want to change the input data, you can change the content of `/IDEPA-XMBD/parameters_file/test_parameters.txt`
