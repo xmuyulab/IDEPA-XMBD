@@ -51,21 +51,23 @@ The dependency of IDEPA-XMBD is: [environment](./environment.yml)
 
 ## Usage
 ### Cmd versioin
-After entering the container`docker run -it ychlouie/idepa_cmd:0.1`, use `-h` to view the IDEPA-XMBD module information:
+After entering the container `docker run -it ychlouie/idepa_cmd:0.1`, use `-h` to view the IDEPA-XMBD module information:
 ```shell
 python /IDEPA-XMBD/individual_depa.py -h
 
 # View specific module information 
 python /IDEPA-XMBD/individual_depa.py moduleName -h
+
+# such as
+python /IDEPA-XMBD/individual_depa.py comparison -h 
 ```
 `moduleName` is the name of the module you want to run 
 
 We also provide example data for each module：
 ```shell
 python /IDEPA-XMBD/individual_depa.py moduleName -p /IDEPA-XMBD/parameters_file/test_parameters.txt
-```
-such as,
-```shell
+
+## such as
 python /IDEPA-XMBD/individual_depa.py stable -p /IDEPA-XMBD/parameters_file/test_parameters.txt
 ```
 
