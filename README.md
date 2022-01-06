@@ -45,7 +45,9 @@ such as,
 mkdir ~/IDEPA
 
 docker run -it -d -p 38765:8095 -v ~/IDEPA:/IDEPA/workdir lylan/idepa:0.1
+
 ```
+Next, open `127.0.0.1:38765` in the local browser 
 
 The dependency of IDEPA-XMBD is: [environment](./environment.yml)
 
