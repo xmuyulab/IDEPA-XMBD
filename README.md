@@ -38,7 +38,7 @@ Create a docker container
 docker run -it -d -p HostPort:8095 -v HostDirectory:/IDEPA/workdir lylan/idepa:0.1
 ```
 
-Then, you can enter the IDEPA_plotly version by visiting `HostIP:HostPort`, and all output files will be saved in `HostDirectory`. For example: HostPort could be set to 30809, HostDirectory could be set to /IDEPA-plotly-workdir, HostDirectory must exist. These two parameters can be changed according to user needs.
+Then, you can enter the IDEPA_plotly version by visiting `HostIP:HostPort`, and all output files will be saved in `HostDirectory`. For example: HostPort could be set to `38765`, HostDirectory could be set to `~/IDEPA`, HostDirectory must exist. These two parameters can be changed according to user needs.
 
 such as,
 ```shell
