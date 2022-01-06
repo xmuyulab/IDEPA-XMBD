@@ -65,7 +65,7 @@ python /IDEPA-XMBD/individual_depa.py comparison -h
 
 We also provide example data for each module：
 ```shell
-python /IDEPA-XMBD/individual_depa.py moduleName -p /IDEPA-XMBD/parameters_file/test_parameters.txt
+python /IDEPA-XMBD/individual_depa.py [moduleName] -p /IDEPA-XMBD/parameters_file/test_parameters.txt
 
 ## such as
 python /IDEPA-XMBD/individual_depa.py stable -p /IDEPA-XMBD/parameters_file/test_parameters.txt
