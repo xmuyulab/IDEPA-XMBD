@@ -56,7 +56,7 @@ After entering the container `docker run -it ychlouie/idepa_cmd:0.1`, use `-h` t
 python /IDEPA-XMBD/individual_depa.py -h
 
 # View specific module information 
-python /IDEPA-XMBD/individual_depa.py moduleName -h
+python /IDEPA-XMBD/individual_depa.py [moduleName] -h
 
 # such as
 python /IDEPA-XMBD/individual_depa.py comparison -h 
