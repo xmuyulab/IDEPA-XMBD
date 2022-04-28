@@ -83,4 +83,4 @@ After entering the container, you can operate according to [Procedure](./procedu
 
 ## 3. Cite this article
 
-Liu Y, Lin Y, Yang W, et al. Application of individualized differential expression analysis in human cancer proteome[J]. Briefings in Bioinformatics, 2022.
+[1] Liu Y, Lin Y, Yang W, et al. Application of individualized differential expression analysis in human cancer proteome[J]. Briefings in Bioinformatics, 2022.
