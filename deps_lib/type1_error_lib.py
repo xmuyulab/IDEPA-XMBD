@@ -393,21 +393,21 @@ def get_nd_param_sn(nd_result, nd_set, method, GROUP_DEP_THRES=0.5):
         
         _dep_param = nd_set[k].loc[_dep_prot, :].mean(axis=1).values
         _undep_param = nd_set[k].loc[_undep_prot, :].mean(axis=1).values
-        _sn = (np.mean(_dep_param) - np.mean(_undep_param)) / (np.std(_dep_param) - np.std(_undep_param))
+        _sn = (np.mean(_dep_param) - np.mean(_undep_param)) / (np.std(_dep_param) + np.std(_undep_param))
         sn.append(_sn)
         nd_param_type.append('mean')
         nd_method.append(method)
         
         _dep_param = nd_set[k].loc[_dep_prot, :].var(axis=1).values
         _undep_param = nd_set[k].loc[_undep_prot, :].var(axis=1).values
-        _sn = (np.mean(_dep_param) - np.mean(_undep_param)) / (np.std(_dep_param) - np.std(_undep_param))
+        _sn = (np.mean(_dep_param) - np.mean(_undep_param)) / (np.std(_dep_param) + np.std(_undep_param))
         sn.append(_sn)
         nd_param_type.append('var')
         nd_method.append(method)
         
         _dep_param = (nd_set[k].loc[_dep_prot, :].std(axis=1) / nd_set[k].loc[_dep_prot, :].mean(axis=1)).values
         _undep_param = (nd_set[k].loc[_undep_prot, :].std(axis=1) / nd_set[k].loc[_undep_prot, :].mean(axis=1)).values
-        _sn = (np.mean(_dep_param) - np.mean(_undep_param)) / (np.std(_dep_param) - np.std(_undep_param))
+        _sn = (np.mean(_dep_param) - np.mean(_undep_param)) / (np.std(_dep_param) + np.std(_undep_param))
         sn.append(_sn)
         nd_param_type.append('cv')
         nd_method.append(method)
